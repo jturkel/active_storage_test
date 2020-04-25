@@ -1,0 +1,17 @@
+
+<%= image_tag(@user.avatar, size: "50") %>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <% @user.images.each do |image| %>
+    <%= image_tag(image, size: "50") %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Back', users_path %>
